@@ -1,0 +1,174 @@
+ .affiliate-programs {
+     background-image: url(/images/home/about-us-bg.jpg);
+     background-size: cover;
+     height: 100vh;
+ }
+
+ .admin-user-status-btn {
+     color: #426ff6;
+     border: none;
+     background: none;
+ }
+
+ .admin_user_management {
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ .btn-invite-user {
+     color: #ffffff;
+     background-color: #426ff6;
+     /* border-width: 1px; */
+     /* border-style: ridge; */
+     border-radius: 5px;
+     /* border-color: white; */
+     padding: 10px;
+     cursor: pointer;
+ }
+
+ .admin-user-managemenet-title {
+     padding-bottom: 40px;
+     padding-top: 40px;
+     justify-content: center;
+ }
+
+ .admin-manage-btn-cover {
+     text-align: right;
+
+ }
+
+ .user-management-account-active-modal-btn {
+     display: none;
+ }
+
+ .user-account-active-modal .modal-dialog .modal-content {
+     background-image: url('/images/home/about-us-bg.jpg');
+ }
+
+ .user-account-active-modal .past-sessions-title {
+     padding-top: 40px;
+     text-align: center;
+ }
+
+ .user-account-active-modal .user-management-control {
+     margin: 0px;
+     padding-top: 20px;
+     padding-bottom: 40px;
+ }
+
+ .admin-invite-new-user-text-panel {
+     text-align: center;
+     padding-top: 40px;
+     padding-bottom: 20px;
+ }
+
+
+ .user-account-active-modal .admin-user-management-control-modal-panel {
+     text-align: center;
+ }
+
+ .session-image-profile-container .audio-open-modal-past {
+     cursor: pointer;
+
+ }
+
+ .user-account-active-modal-header {
+     display: none;
+ }
+
+ .admin-user-management-control-btn-yes {
+     /* border-width: 1px; */
+     /* border-style: solid; */
+     cursor: pointer;
+     border-radius: 5px;
+     padding: 10px 40px 10px 40px;
+     background-color: #426ff6;
+     color: white;
+ }
+
+ .enter-email-address-text {
+     padding: 10px 5px 10px 5px;
+     text-align: center;
+ }
+
+ .admin-user-management-control-btn-yes:hover {}
+
+ .admin-user-management-control-btn-no {
+    cursor: pointer;
+     border-width: 1px;
+     border-style: solid;
+     border-radius: 5px;
+     padding: 9px 30px 9px 30px;
+ }
+
+ .admin-user-management-control-btn-no:hover {}
+
+ @media (max-width: 900px) {
+     th.gridjs-th-sort .gridjs-th-content {
+         font-size: 10px;
+         padding-top: 6px;
+         width: calc(100% - 15px);
+     }
+
+     td.gridjs-td {
+         border: 1px solid #e5e7eb;
+         box-sizing: content-box;
+         padding: 12px 24px;
+         font-size: 13px;
+     }
+
+     th.gridjs-th {
+         padding: 0px !important;
+         padding-left: 10px !important;
+         background-color: #f9fafb;
+         border: 1px solid #e5e7eb;
+         border-top: none;
+         box-sizing: border-box;
+         color: #6b7280;
+         outline: none;
+         /* padding: 14px 24px; */
+         position: relative;
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         user-select: none;
+         vertical-align: middle;
+         white-space: nowrap;
+     }
+
+     .user-account-active-modal-header {
+         display: flex;
+     }
+
+     .upcoming-session-modal-cross {
+         border: none;
+         background-color: #ffffff;
+         font-size: 30px;
+     }
+
+     .user-management-title-mobile {
+         text-align: center;
+     }
+
+     .btn-invite-user {
+         color: #ffffff;
+         background-color: #426ff6;
+         /* border-width: 1px; */
+         /* border-style: ridge; */
+         border-radius: 5px;
+         /* border-color: white; */
+         padding: 10px;
+         cursor: pointer;
+     }
+
+     .admin-manage-btn-cover {
+         text-align: center;
+     }
+
+     .user-management-control {
+         justify-content: space-around;
+     }
+
+     .admin-user-management-control-modal-panel {
+         width: auto;
+     }
+ }

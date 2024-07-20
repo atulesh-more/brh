@@ -1,0 +1,184 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0;
+  background-color: white;
+  box-shadow: 0px 3px 10px gray;
+  z-index: 1000;
+}
+
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.admin-dashboard-header {
+  display: flex;
+  align-items: center;
+}
+
+.header a.logo {
+  width: 170px;
+}
+
+.header .btn-menu {
+  background: transparent;
+  border: 0;
+  width: 20px;
+  padding: 0;
+  transition: 0.3s all;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (min-width: 992px) {
+  .header .btn-menu {
+    display: none;
+  }
+
+}
+
+.header .btn-menu .line {
+  background-color: #000;
+  width: 100%;
+  display: block;
+  height: 2px;
+}
+
+.header .btn-menu.close {
+  width: 20px;
+}
+
+.header .btn-menu.close .line-1 {
+  transform: rotate(45deg);
+}
+
+.header .btn-menu.close .line-2 {
+  display: none;
+}
+
+.header .btn-menu.close .line-3 {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -7px;
+}
+
+.header .btn-back {
+  border-color: black;
+  font-size: 16px;
+}
+
+.header .menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header .menu a {
+  text-decoration: none;
+  color: #5f5f5f;
+  font-weight: 600;
+}
+
+.header .menu a:hover {
+  color: #426ff6;
+}
+
+.header .btn-join {
+  background-color: #426ff6;
+  color: white;
+  font-size: 1.25rem;
+  text-transform: none;
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+  text-align: center;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border-radius: var(--bs-btn-border-radius);
+}
+
+.header .link {
+  cursor: pointer;
+}
+
+.header a.logo1 {
+  display: none;
+}
+
+.header .btn-back1 {
+  display: none;
+}
+
+.header .mobile-menu-fa-icon {
+  display: none;
+}
+
+@media (max-width: 992px) {
+
+  .header .mobile-menu-fa-icon {
+    display: flex;
+    font-size: 20px;
+    padding-right: 10px;
+  }
+
+  .header .logo1 img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .header .menu {
+    position: fixed;
+    left: -100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: white;
+    width: 70%;
+    height: 100vh;
+    top: 54px;
+    padding: 20px 30px;
+    align-items: flex-start;
+    transition: 0.3s all;
+  }
+
+  .header .menu.show .dashboard {
+    display: none;
+  }
+
+  .header .menu.show {
+    left: 0;
+  }
+
+  .header .menu a {
+    display: flex;
+    font-size: 13px;
+  }
+
+  .header a.logo {
+    display: none;
+  }
+
+  .header a.logo1 {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .header .btn-back {
+    display: none;
+  }
+
+  .header .btn-back1 {
+    display: flex;
+    padding-left: 0px;
+  }
+}
+
+#main-content {
+  height: 100vh;
+  min-height: 100%;
+  padding-top: 87px;
+}

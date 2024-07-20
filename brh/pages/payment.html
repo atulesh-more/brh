@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Payment</title>
+  <!-- <script src="https://js.authorize.net/v1/Accept.js" charset="utf-8"></script> -->
+  <!-- <script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8"></script> -->
+  <!-- <script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8"></script> -->
+   
+</head>
+
+<body>
+  <div class="paymentcontact d-flex">
+    <div class="container d-flex justify-content-center mt-5 mb-5">
+
+      <div class="row g-3">
+
+        <div class="col-md-6">
+
+          <span>Payment Method</span>
+          <div class="card">
+
+            <div class="accordion" id="accordionExample">
+ 
+              <div class="card">
+                <div class="card-header p-0" id="headingTwo">
+                  <h2 class="mb-0">
+                       
+                  </h2>
+                </div>
+           
+              </div>
+             
+              <div class="card">
+                <div class="card-header p-0">
+                  <h2 class="mb-0">
+                    <button class="btn btn-light btn-block text-left rounded-1 payment-method-credit-card" data-toggle="collapse"
+                      data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <div class="d-flex align-items-center justify-content-between">
+
+                        <span class="payment-method-card-title">Credit card</span>
+                        <div class="icons">
+                          <img src="https://i.imgur.com/2ISgYja.png" width="30">
+                          <img src="https://i.imgur.com/W1vtnOV.png" width="30">
+                          <img src="https://i.imgur.com/35tC99g.png" width="30">
+                          <img src="https://i.imgur.com/2ISgYja.png" width="30">
+                        </div>
+
+                      </div>
+                    </button>
+                  </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                  data-parent="#accordionExample">
+                  <div class="card-body payment-card-body">
+
+                    <span class="font-weight-normal card-text">Card Number</span>
+                    <div class="input">
+
+                      <i class="fa fa-credit-card"></i>
+                      <input type="text" id="card_number" class="form-control" placeholder="0000 0000 0000 0000">
+
+                    </div>
+
+                    <div class="row mt-3 mb-3">
+
+                      <div class="col-md-6">
+
+                        <span class="font-weight-normal card-text">Expiry Date</span>
+                        <div class="input">
+
+                          <i class="fa fa-calendar"></i>
+                          <input type="text" id="card_expiry" class="form-control" placeholder="MM/YY" maxlength="7">
+                        
+                        </div>
+
+                      </div>
+
+
+                      <div class="col-md-6">
+
+                        <span class="font-weight-normal card-text">CVC/CVV</span>
+                        <div class="input">
+
+                          <i class="fa fa-lock"></i>
+                          <input type="text" id="card_cvv" class="form-control" placeholder="000" maxlength="4">
+
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                    <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Your transaction is secured
+                      with ssl certificate</span>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+          <span>Summary</span>
+
+          <div class="card">
+
+            <div class="d-flex justify-content-between p-3">
+
+
+              <div class="mt-1">
+                <sup class="super-price pay-price">$9.99</sup>
+                <span class="super-month" id="super-month">/Month</span>
+              </div>
+
+            </div>
+
+
+            <hr class="mt-0 line">
+
+
+            <div class="p-3 d-flex justify-content-between">
+
+              <div class="d-flex flex-column">
+
+                <span>Today you pay(US Dollars)</span>
+                <small class="pay-price">$9.99</small>
+
+              </div>
+              <!--NEed to updated with current plan dollars-->
+              <span class="pay-price">$0</span>
+
+
+
+            </div>
+
+
+            <div class="p-3 pay-btn-payment">
+
+              <button class="btn btn-primary btn-block free-button pay-bill-btn-card col-md-5 rounded-1" id="pay_btn">Pay with Card</button>
+              <div id="paypal-button-container" class="col-md-5 pay-bill-btn-card-paypal"></div> 
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="mobile-buttons-conference">
+    <a class="button333" href="/audio-conferencing-platform">
+      <i class="fa fa-video-camera" aria-hidden="true"></i>
+
+      Streaming
+    </a>
+    <a class="button333" href="/audio-conferencing-platform/my-account">
+      <i class="fa fa-user" aria-hidden="true"></i>
+
+      My Account
+    </a>
+    <a class="button333" href="/audio-conferencing-platform/my-payment">
+      <i class="fa fa-credit-card" aria-hidden="true"></i>
+
+      Payment
+    </a>
+    <a class="button333" href="/join-session">
+      <i class="fa fa-sign-out" aria-hidden="true"></i>
+
+      Logout
+    </a>
+  </div>
+  <div id="DefaultModal" class="procedure-modal">
+    <div class="procedure-modal-content">
+        <h4 id="procedure_title">Username or password is incorrect.</h4>
+        <div class="user-management-control">
+            <div class=" admin-user-management-control-modal-panel">
+                <a class="admin-user-management-control-btn-yes" id="procedureYesBtn">OK</a>
+            </div>
+         
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>

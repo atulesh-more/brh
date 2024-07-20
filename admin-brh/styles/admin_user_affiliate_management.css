@@ -1,0 +1,40 @@
+.admin-static-view-chart {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-static-view-text {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.admin-static-subscribed-users {
+    padding-top: 50px;
+    margin: 0;
+}
+
+.admin-static-view-title-text {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 25px;
+}
+ 
+@media screen and (min-width: 769px) {
+    .postcard .postcard__text {
+        padding: 2rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .affiliate-programs .pie-chart-view {
+        width: 100%;
+    }
+
+    .affiliate-programs .pie-chart-view-group {
+        width: 300px;
+        text-align: center;
+    }
+}

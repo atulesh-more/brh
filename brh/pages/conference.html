@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Audio Conference Platform</title>
+</head>
+
+<body>
+    <div class="conference">
+        <div class="container mobile-check-conference">
+
+            <div class="row live-sessions">
+                <!-- Content for the fifth row goes here. -->
+                <a class="mt-2">
+                    <h2 class="live-title" id="live_conference_title"></h2>
+                    <h5 class="live-title-minutes" id="live_conference_title_minutes">In 1 hours 20minutes</h5>
+                </a>
+                <button id="joinBtn">Join Conference</button>
+                <button id="requestBtn">Request Listening Recorded</button>
+                <div class="audio-preview row mx-auto" id="audio-preview">
+                    <div class="col-md-7 mx-auto">
+                        <a class="audio-open-modal">
+                            <img src="/images/home/musicplayer.jpg" alt="Image 1" id="live-session-img"
+                                class="img-fluid audio-preview-img">
+                        </a>
+                    </div>
+                </div>
+                
+                <!----------------------------------------------atlers this is when we click on play icon------>
+                <div class="audio" id="musicplayer">
+                    <div class="container-audio" id="container-audio-live">
+                        <div class="musicplayer-head-buttons">
+                            <a><img class="logo" src="/images/home/live_now.png" /></a>
+                            <a>
+                                <p class="sandwatch" id="live_session_playing_timer">&#8987; 00:00</p>
+                            </a>
+                            <a href="/audio-conferencing-platform" class="close music-player-cross-btn_default"><img
+                                    src="/images/home/cross.png" /></a>
+                        </div>
+                        <canvas id="canvas_live_sessions"></canvas> 
+                        
+                        <!--------------------atlers adding code for audio player------------------------->
+                	<div id="video_info">
+                        Stream will start playing automatically<br />when it is live
+                    </div>
+
+                    <!-- HLS Player -->
+                    <div id="video_container">
+                        <video playsinline id="video-player" class="video-js vjs-default-skin" controls preload="auto" >
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading
+                                to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports
+                                    HTML5 video</a>
+                            </p>
+                        </video>
+                    </div>
+                    <!-- WebRTC Player -->
+
+					<video id="remoteVideo" controls playsinline></video>
+       
+            
+        
+            <div id="networkWarning">Your connection isn't fast enough to play this stream!</div>
+            <img id="play_button" src="images/play.png" onClick="playWebRTCVideo()"
+                style="position: absolute; top: 30px; left: 30px; display: none;" />
+        
+        
+            <!-- Mute/Unmute Video Button -->
+            <button onClick="changeVideoMuteStatus()" id="unmuteButton" title="Mute/Unmute Video">
+                Unmute
+            </button>
+                        
+                      
+
+                    </div>
+                    <!-- atlers
+                    <div class="container-audio1">
+                        
+                        <audio id="userAudio" autoplay controls></audio>
+                        <i class="full-screen fa fa-arrows-alt"></i>
+                    </div> -->
+                </div>
+
+            </div>
+            <hr class="my-4">
+            <div class="row account-section">
+                <div class="col-md-12">
+                    <a class="mt-2">
+                        <h2 class="account-title">My Account</h2>
+                    </a>
+                    <div class="form-check form-switch account-show">
+                        <input class="form-check-input" type="checkbox" id="accountSwitch">
+                        <label class="form-check-label" id="account_switch_title">Account Active: No
+                            Action Needed</label>
+                    </div>
+                    <div class="account-bill">
+                        <img class="account-bill-image" src="/images/home/bill_icon.png" width="32" height="32" />
+                        <a href="/subscription" class="account-bill-date-text" id="nextBillDate">New Billing Date: 23 January
+                            2023</a>
+                    </div>
+
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            <div class="row past-sessions">
+                <h2 class="past-sessions-title">Past Sessions - Recorded</h2>
+                <a class="past-sessions-date-pick" style="display: none;" id="show-date-yesterday">23 January 2023</a>
+                <!-- Past 5 sessions listed by server....-->
+                <div class="container mt-4 desktop-player-session">
+                    <div class="row past-sessions-data" id="audio-preview-past">
+                        <div class="col-md-2 mb-4">
+                            <div class="audio-open-modal-past">
+                                <img src="/images/home/musicplayer.jpg" alt="Image 1"
+                                    class="img-fluid audio-past-session-1" id="audio_past_session_1">
+                                <p class="time-to-play past_session_time">5am</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-4">
+                            <div class="audio-open-modal-past">
+                                <img src="/images/home/musicplayer.jpg" alt="Image 2"
+                                    class="img-fluid audio-past-session-2" id="audio_past_session_2">
+                                <p class="time-to-play past_session_time">8am</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-4">
+                            <div class="audio-open-modal-past">
+                                <img src="/images/home/musicplayer.jpg" alt="Image 3"
+                                    class="img-fluid audio-past-session-3" id="audio_past_session_3">
+                                <p class="time-to-play past_session_time">12pm</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-4">
+                            <div class="audio-open-modal-past">
+                                <img src="/images/home/musicplayer.jpg" alt="Image 4"
+                                    class="img-fluid audio-past-session-4" id="audio_past_session_4">
+                                <p class="time-to-play past_session_time">4pm</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-4">
+                            <div class="audio-open-modal-past">
+                                <img src="/images/home/musicplayer.jpg" alt="Image 5"
+                                    class="img-fluid audio-past-session-5" id="audio_past_session_5">
+                                <p class="time-to-play past_session_time">7pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile viewer -->
+                <div class="slider-wrapper" id="audio-preview-past1">
+
+                    <div class="content-wrap">
+                        <ul class="slides-container" id="slides-container1">
+                            <button class="slide-arrow" id="slide-arrow-prev1">
+                                &#8249;
+                            </button>
+                            <button class="slide-arrow" id="slide-arrow-next1">
+                                &#8250;
+                            </button>
+
+                            <li class="slide">
+                                <a class="card-wrap">
+                                    <div class="audio-open-modal-past">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 1"
+                                            class="img-fluid audio-past-session-1" id="audio_past_session_11">
+                                    </div>
+                                </a>
+                                <p class="past-session-related-time"> 2023/01/23 5 AM</p>
+                            </li>
+                            <li class="slide">
+                                <a class="card-wrap">
+                                    <div class="audio-open-modal-past">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 2"
+                                            class="img-fluid audio-past-session-2" id="audio_past_session_22">
+                                    </div>
+                                </a>
+                                <p class="past-session-related-time"> 2023/01/23 8 AM</p>
+                            </li>
+                            <li class="slide">
+                                <a class="card-wrap">
+                                    <div class="audio-open-modal-past">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 3"
+                                            class="img-fluid audio-past-session-3" id="audio_past_session_33">
+                                    </div>
+                                </a>
+                                <p class="past-session-related-time"> 2023/01/23 12 PM</p>
+                            </li>
+                            <li class="slide">
+                                <a class="card-wrap">
+                                    <div class="audio-open-modal-past">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 4"
+                                            class="img-fluid audio-past-session-4" id="audio_past_session_44">
+                                    </div>
+                                </a>
+                                <p class="past-session-related-time"> 2023/01/23 4 PM</p>
+                            </li>
+                            <li class="slide">
+                                <a class="card-wrap">
+                                    <div class="audio-open-modal-past">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 5"
+                                            class="img-fluid audio-past-session-5" id="audio_past_session_55">
+                                    </div>
+                                </a>
+                                <p class="past-session-related-time"> 2023/01/23 7 PM</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-4">
+            <div class="row upcoming-sessions">
+                <h2 class="upcoming-sessions-title">Upcoming Sessions</h2>
+                <div class="col-11 mx-auto upcoming-sessions-calendar">
+                    <div class="calendar-container">
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="upcoming-session-modal-btn" data-bs-toggle="modal" data-bs-target="#upcoming-session-modal">
+    </div>
+    <!-- upcoming session video showing.....-->
+    <div class="modal fade upcoming-session-modal" id="upcoming-session-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-upcoming-session-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Upcoming Sessions</h5>
+                    <!-- Bootstrap Close Button -->
+                    <button type="button" class="close upcoming-session-modal-cross music-player-cross-btn_default"
+                        data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <div class="row past-sessions11">
+                            <a class="past-sessions-date-pick" id="upcoming-session-modal-date"></a>
+
+                            <div class="container mt-4">
+                                <div class="row past-sessions-data" id="audio-preview-past2">
+                                    <div class="col-md-6 mb-4">
+                                        <a class="audio-open-modal-past">
+                                            <img src="/images/home/musicplayer_sandwatch.jpg" alt="Image 1"
+                                                class="img-fluid audio-preview-img-upcoming">
+                                        </a>
+                                        <p class="time-to-play">5am</p>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <a class="audio-open-modal-past">
+                                            <img src="/images/home/musicplayer_sandwatch.jpg" alt="Image 2"
+                                                class="img-fluid audio-preview-img-upcoming">
+                                        </a>
+                                        <p class="time-to-play">8am</p>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <a class="audio-open-modal-past">
+                                            <img src="/images/home/musicplayer_sandwatch.jpg" alt="Image 3"
+                                                class="img-fluid audio-preview-img-upcoming">
+                                        </a>
+                                        <p class="time-to-play">12pm</p>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <a class="audio-open-modal-past">
+                                            <img src="/images/home/musicplayer_sandwatch.jpg" alt="Image 5"
+                                                class="img-fluid audio-preview-img-upcoming">
+                                        </a>
+                                        <p class="time-to-play">4pm</p>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <!-- <a class="audio-open-modal-past" data-bs-toggle="modal"
+                                            data-bs-target="#upcoming-session-modal-audio">
+                                            <img src="/images/home/musicplayer.jpg" alt="Image 5"
+                                                class="img-fluid audio-preview-img">
+                                        </a> -->
+                                        <a class="audio-open-modal-past">
+                                            <img src="/images/home/musicplayer_sandwatch.jpg" alt="Image 5"
+                                                class="img-fluid audio-preview-img-upcoming">
+                                        </a>
+                                        <p class="time-to-play">5pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mobile-buttons-conference">
+        <a class="button333" href="/audio-conferencing-platform">
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+
+            Streaming
+        </a>
+        <a class="button333" href="/audio-conferencing-platform/my-account">
+            <i class="fa fa-user" aria-hidden="true"></i>
+
+            My Account
+        </a>
+        <a class="button333" href="/audio-conferencing-platform/my-payment">
+            <i class="fa fa-credit-card" aria-hidden="true"></i>
+
+            Payment
+        </a>
+        <a class="button333" href="/join-session">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+
+            Logout
+        </a>
+    </div>
+
+
+    <div class="modal fade" id="past-session-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog session-player-dialog" id="musicplayer">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <div class="audio">
+                            <div class="container-audio-capsule">
+                                <div class="container-audio">
+                                    <div class="musicplayer-head-buttons">
+                                        <a><img class="logo" id="live_logo_img" src="/images/home/live_now.png" /><span
+                                                id="past_savetime_txt"></span></a>
+                                        <span style="display: inline-flex;">
+                                            <a class="music-player-time-display">
+                                                <p class="sandwatch" id="live_session_playing_timer1">&#8987; 00:00</p>
+                                            </a>
+                                        </span>
+                                        <a class="music-player-cross-btn" data-bs-dismiss="modal"
+                                            aria-label="Close"></a>
+                                    </div>
+                                    <div id="audio-player-bar-container" style="height: 100%;">
+                                        <canvas id="canvas_past_sessions"></canvas>
+                                        <!-- <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div> -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="container-audio1">
+                                <!-- <audio controls loop autoplay>
+                                        
+                                        Your browser dose not Support the audio Tag
+                                    </audio> -->
+                                <i class="full-screen fa fa-arrows-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="adminidle_adminDefaultModal" class="procedure-modal">
+        <div class="procedure-modal-content">
+            <h4 id="conference_error_modal_title">The admin has not started this live session.</h4>
+            <div class="user-management-control">
+                <div class=" admin-user-management-control-modal-panel">
+                    <a class="admin-user-management-control-btn-yes" id="adminidle_useradminprocedureYesBtn">OK</a>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

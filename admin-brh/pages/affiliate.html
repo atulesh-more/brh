@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Affiliate Program</title>
+</head>
+
+<body>
+  <div class="login-field">
+
+    <div class="login mx-auto d-flex">
+
+      <div class="field-panel">
+
+
+
+        <!-- The Modal -->
+        <div id="recoverAlert" class="recover-modal container">
+          <div class="d-flex justify-content-center recover-modal-dialog">
+            <p class="recover-modal-text">If your email is registered, a password recovery link has been sent to your
+              inbox</p>
+            <a class="btn-close-modal btn btn-primary btn-login-button-style" href="/affiliate">OK</a>
+          </div>
+        </div>
+
+        <!-- Pills navs -->
+        <ul class=" nav nav-pills nav-justified mb-3 tab-buttons" id="ex1" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="login-tab-nav nav-link active" id="tab-login" data-mdb-toggle="pill" data-id="pills-login"
+              role="tab" aria-controls="pills-login" aria-selected="true">Sign In</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="login-tab-nav nav-link" id="tab-register" data-mdb-toggle="pill" data-id="pills-register"
+              role="tab" aria-controls="pills-register" aria-selected="false">Create an
+              Account</a>
+          </li>
+        </ul>
+        <!-- Pills navs -->
+
+        <!-- Pills content -->
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+            <form>
+              <!-- Email input -->
+              <div class="mb-4">
+                <input type="email" id="loginName" placeholder="Email" class="form-control edited-form-control" />
+              </div>
+              <!-- Password input -->
+              <div class="mb-4">
+                <input type="password" id="loginPassword" placeholder="Password"
+                  class="form-control edited-form-control" />
+              </div>
+              <!-- 2 column grid layout -->
+              <div class="mb-4">
+                <!-- Simple link -->
+                <a class="login-tab-nav" data-id="pills-forgotpassword">Forgot password?</a>
+              </div>
+              <!-- Submit button -->
+              <div class="mb-4 button-parent-div">
+                <button type="submit" class="btn btn-primary btn-login-button-style btn-block mb-4"><a
+                    href="/affiliate/dashboard" style="color: white;">Login</a></button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+            <form>
+              <!-- Name input -->
+              <div class="mb-4">
+                <input type="text" id="registerName" placeholder="FirstName" class="form-control edited-form-control" />
+              </div>
+
+              <!-- Username input -->
+              <div class="mb-4">
+                <input type="text" id="registerUsername" placeholder="LastName"
+                  class="form-control edited-form-control" />
+              </div>
+
+              <!-- Email input -->
+              <div class="mb-4">
+                <input type="email" id="registerEmail" placeholder="Email" class="form-control edited-form-control" />
+              </div>
+
+              <!-- Password input -->
+              <div class="mb-4">
+                <input type="password" id="registerPassword" placeholder="Password"
+                  class="form-control edited-form-control" />
+              </div>
+
+              <!-- Repeat Password input -->
+              <div class="mb-4">
+                <input type="password" id="registerRepeatPassword" placeholder="Retype your Password"
+                  class="form-control edited-form-control" />
+              </div>
+
+              <!-- Submit button -->
+              <div class="mb-4 button-parent-div">
+                <button type="submit" class="btn btn-primary btn-login-button-style btn-block mb-3"><a
+                    href="/affiliate/dashboard" style="color: white;">Create</a></button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="pills-forgotpassword" role="tabpanel" aria-labelledby="tab-forgotpassword">
+            <!-- Email input -->
+            <div class="mb-4">
+              <input type="email" id="forgotEmail" placeholder="Registered Email"
+                class="form-control edited-form-control" />
+            </div>
+
+            <!-- Submit button -->
+            <div class="mb-4 button-parent-div">
+              <button class="btn btn-primary btn-login-button-style btn-block mb-3 btn-open-modal">Recover
+                Password</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pills content -->
+
+      </div>
+
+
+
+
+    </div>
+
+
+
+  </div>
+  <script>
+
+  </script>
+</body>
+
+</html>

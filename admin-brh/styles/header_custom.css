@@ -1,0 +1,92 @@
+.login-header {
+    display: flex;
+    align-items: center;
+}
+
+.login-header .btn-back {
+    border-color: black;
+    font-size: 16px;
+}
+
+.conference-header .btn-back {
+    border-color: black;
+    font-size: 16px;
+}
+
+.login-header .title {
+    margin: 0 auto;
+}
+
+.conference-header {
+    display: flex;
+    align-items: center;
+}
+
+.conference-header .current-time {
+    font-size: 12px;
+    text-align: center;
+}
+
+.conference-header .title {
+    margin: 0 auto;
+}
+
+.conference-header .dropdown {}
+
+.conference-header .dropdown {}
+
+.conference-header .dropdown {}
+
+.conference-header .dropbtn {
+    background-color: transparent;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    padding: 8px 16px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.conference-header .dropdown .avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.conference-header .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.conference-header .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.conference-header .dropdown-content a {
+    /*color: var(--blue);*/
+    color: #333333;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+.conference-header .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.conference-header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.conference-header .dropdown:hover .dropdown-content i {
+    margin-left: 6px;
+    margin-right: 10px;
+}
+
+.conference-header {}

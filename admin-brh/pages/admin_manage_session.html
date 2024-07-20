@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <!-- <div class="admin-dashboard">
+        this is register page
+    </div> -->
+    <div class="affiliate-programs">
+        <div class="container">
+
+            <div class="row dashboard-section">
+                <div class="col-md-12">
+
+                    <div class="row past-sessions2">
+                        <h2 class="past-sessions-title">Upcoming Sessions</h2>
+                        <p></p>
+                        <a class="past-sessions-date-pick" id="show-date-today1">Today - 4 December 2023</a>
+
+                        <button id="startSpeaking">Start Speaking</button>
+                        <button id="stopSpeaking" disabled>Stop Speaking</button>
+                        <audio id="adminAudio" muted="true" controls></audio>
+                        <div id="userList"></div>
+
+
+                        <div class="container mt-4">
+                            <div class="row past-sessions-data" id="audio-preview-past1">
+
+                                <div class="col-md-2 mb-4" id="upcoming-1">
+                                    <div class="session-image-profile-container">
+                                        <div class="audio-open-modal-past session-image-combo-container">
+                                            <i class="fa-solid fa-play session-image-combo-box-play"
+                                                id="upcoming-session-play-1"></i>
+                                            <div class="session-image-combo-box">
+                                                <select id="preserve-session-1">
+                                                    <option value="option">Select a Session</option>
+                                                    <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                    <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                    <option value="12" class="upcoming_time_3">3/12/2023 12PM</option>
+                                                    <option value="16" class="upcoming_time_4">3/12/2023 4PM</option>
+                                                    <option value="19" class="upcoming_time_5">3/12/2023 7PM</option>
+                                                </select>
+                                            </div>
+                                            <img src="/images/home/musicplayer.png" alt="Image 1"
+                                                class="img-fluid session-image-combo-box-img">
+                                        </div>
+                                        <div class="upcoming-session-date-time">
+                                            <p class="upcoming-current-date">2024/1/4</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-4" id="upcoming-2">
+                                    <div class="session-image-profile-container">
+                                        <div class="audio-open-modal-past session-image-combo-container">
+                                            <i class="fa-solid fa-play session-image-combo-box-play"
+                                                id="upcoming-session-play-2"></i>
+                                            <div class="session-image-combo-box">
+                                                <select id="preserve-session-2">
+                                                    <option value="option">Select a Session</option>
+                                                    <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                    <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                    <option value="12" class="upcoming_time_3">3/12/2023 12PM</option>
+                                                    <option value="16" class="upcoming_time_4">3/12/2023 4PM</option>
+                                                    <option value="19" class="upcoming_time_5">3/12/2023 7PM</option>
+                                                </select>
+                                            </div>
+                                            <img src="/images/home/musicplayer.png" alt="Image 2"
+                                                class="img-fluid session-image-combo-box-img">
+                                        </div>
+                                        <div class="upcoming-session-date-time">
+                                            <p class="upcoming-current-date">2024/1/4</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-4" id="upcoming-3">
+                                    <div class="session-image-profile-container">
+                                        <div class="audio-open-modal-past session-image-combo-container">
+                                            <i class="fa-solid fa-play session-image-combo-box-play"
+                                                id="upcoming-session-play-3"></i>
+                                            <div class="session-image-combo-box">
+                                                <select id="preserve-session-3">
+                                                    <option value="option">Select a Session</option>
+                                                    <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                    <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                    <option value="12" class="upcoming_time_3">3/12/2023 12PM</option>
+                                                    <option value="16" class="upcoming_time_4">3/12/2023 4PM</option>
+                                                    <option value="19" class="upcoming_time_5">3/12/2023 7PM</option>
+                                                </select>
+                                            </div>
+                                            <img src="/images/home/musicplayer.png" alt="Image 3"
+                                                class="img-fluid session-image-combo-box-img">
+                                        </div>
+                                        <div class="upcoming-session-date-time">
+                                            <p class="upcoming-current-date">2024/1/4</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-4" id="upcoming-4">
+                                    <div class="session-image-profile-container">
+                                        <div class="audio-open-modal-past session-image-combo-container">
+                                            <i class="fa-solid fa-play session-image-combo-box-play"
+                                                id="upcoming-session-play-4"></i>
+                                            <div class="session-image-combo-box">
+                                                <select id="preserve-session-4">
+                                                    <option value="option">Select a Session</option>
+                                                    <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                    <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                    <option value="12" class="upcoming_time_3">3/12/2023 12PM</option>
+                                                    <option value="16" class="upcoming_time_4">3/12/2023 4PM</option>
+                                                    <option value="19" class="upcoming_time_5">3/12/2023 7PM</option>
+                                                </select>
+                                            </div>
+                                            <img src="/images/home/musicplayer.png" alt="Image 4"
+                                                class="img-fluid session-image-combo-box-img">
+                                        </div>
+                                        <div class="upcoming-session-date-time">
+                                            <p class="upcoming-current-date">2024/1/4</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-4" id="upcoming-5">
+                                    <div class="session-image-profile-container">
+                                        <div class="audio-open-modal-past session-image-combo-container">
+                                            <i class="fa-solid fa-play session-image-combo-box-play"
+                                                id="upcoming-session-play-5"></i>
+                                            <div class="session-image-combo-box">
+                                                <select id="preserve-session-5">
+                                                    <option value="option">Select a Session</option>
+                                                    <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                    <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                    <option value="12" class="upcoming_time_3">3/12/2023 12PM</option>
+                                                    <option value="16" class="upcoming_time_4">3/12/2023 4PM</option>
+                                                    <option value="19" class="upcoming_time_5">3/12/2023 7PM</option>
+                                                </select>
+                                            </div>
+                                            <img src="/images/home/musicplayer.png" alt="Image 5"
+                                                class="img-fluid session-image-combo-box-img">
+                                        </div>
+                                        <div class="upcoming-session-date-time">
+                                            <p class="upcoming-current-date">2024/1/4</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row past-sessions">
+
+                        <h2 class="past-sessions-title">Past Sessions - Recorded</h2> <!--atlers-->
+                        <p></p>
+                        <a class="past-sessions-date-pick" id="show-date-yesterday1">Yesterday - 3 December 2023</a>
+
+                        <div class="container mt-4">
+                            <div class="row past-sessions-data" id="audio-preview-past">
+                                <div class="col-md-2 mb-4">
+                                    <div class="audio-open-modal-past" id="past_session_1">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 1" class="img-fluid">
+                                    </div>
+                                    <div class="past-session-related-time">
+                                        <p class="past-session-date-display past-session-date-display-1">2023/01/23</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <div class="audio-open-modal-past" id="past_session_2">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 2" class="img-fluid">
+                                    </div>
+                                    <div class="past-session-related-time">
+                                        <p class="past-session-date-display past-session-date-display-2">2023/01/23</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <div class="audio-open-modal-past" id="past_session_3">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 3" class="img-fluid">
+                                    </div>
+                                    <div class="past-session-related-time">
+                                        <p class="past-session-date-display past-session-date-display-3">2023/01/23</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <div class="audio-open-modal-past" id="past_session_4">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 4" class="img-fluid">
+                                    </div>
+                                    <div class="past-session-related-time">
+                                        <p class="past-session-date-display past-session-date-display-4">2023/01/23</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-4">
+                                    <div class="audio-open-modal-past" id="past_session_5">
+                                        <img src="/images/home/musicplayer.jpg" alt="Image 5" class="img-fluid">
+                                        <div class="past-session-related-time">
+                                            <p class="past-session-date-display past-session-date-display-5">2023/01/23
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Mobile view -->
+                    <div class="slider-wrapper-upcoming">
+                        <h2 class="past-sessions-title">Upcoming Sessions</h2>
+                        <p></p>
+                        <a class="past-sessions-date-pick" id="show-date-today">Today - 4 December 2023</a>
+
+                        <div class="content-wrap">
+
+                            <ul class="slides-container-upcoming" id="slides-container-upcoming">
+                                <button class="slide-arrow-upcoming" id="slide-arrow-prev-upcoming">
+                                    &#8249;
+                                </button>
+                                <button class="slide-arrow-upcoming" id="slide-arrow-next-upcoming">
+                                    &#8250;
+                                </button>
+                                <li class="slide-upcoming" id="upcoming-11">
+                                    <a class="card-wrap">
+                                        <div class="session-image-profile-container">
+                                            <div class="audio-open-modal-past session-image-combo-container">
+                                                <i class="fa-solid fa-play session-image-combo-box-play"
+                                                    id="upcoming-session-play-11"></i>
+                                                <img src="/images/home/musicplayer.png" alt="Image 1"
+                                                    class="img-fluid session-image-combo-box-img">
+                                                <div class="session-image-combo-box">
+                                                    <select id="preserve-session-11">
+                                                        <option value="option">Select a Session</option>
+                                                        <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                        <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                        <option value="12" class="upcoming_time_3">3/12/2023 12PM
+                                                        </option>
+                                                        <option value="16" class="upcoming_time_4">3/12/2023 4PM
+                                                        </option>
+                                                        <option value="19" class="upcoming_time_5">3/12/2023 7PM
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="upcoming-session-date-time">
+                                                <p class="upcoming-current-date">2024/1/4</p>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-upcoming" id="upcoming-22">
+                                    <a class="card-wrap">
+                                        <div class="session-image-profile-container">
+                                            <div class="audio-open-modal-past session-image-combo-container">
+                                                <i class="fa-solid fa-play session-image-combo-box-play"
+                                                    id="upcoming-session-play-22"></i>
+                                                <img src="/images/home/musicplayer.png" alt="Image 1"
+                                                    class="img-fluid session-image-combo-box-img">
+                                                <div class="session-image-combo-box">
+                                                    <select id="preserve-session-22">
+                                                        <option value="option">Select a Session</option>
+                                                        <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                        <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                        <option value="12" class="upcoming_time_3">3/12/2023 12PM
+                                                        </option>
+                                                        <option value="16" class="upcoming_time_4">3/12/2023 4PM
+                                                        </option>
+                                                        <option value="19" class="upcoming_time_5">3/12/2023 7PM
+                                                        </option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="upcoming-session-date-time">
+                                                <p class="upcoming-current-date">2024/1/4</p>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-upcoming" id="upcoming-33">
+                                    <a class="card-wrap">
+                                        <div class="session-image-profile-container">
+                                            <div class="audio-open-modal-past session-image-combo-container">
+                                                <i class="fa-solid fa-play session-image-combo-box-play"
+                                                    id="upcoming-session-play-33"></i>
+                                                <img src="/images/home/musicplayer.png" alt="Image 1"
+                                                    class="img-fluid session-image-combo-box-img">
+                                                <div class="session-image-combo-box">
+                                                    <select id="preserve-session-33">
+                                                        <option value="option">Select a Session</option>
+
+                                                        <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                        <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                        <option value="12" class="upcoming_time_3">3/12/2023 12PM
+                                                        </option>
+                                                        <option value="16" class="upcoming_time_4">3/12/2023 4PM
+                                                        </option>
+                                                        <option value="19" class="upcoming_time_5">3/12/2023 7PM
+                                                        </option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="upcoming-session-date-time">
+                                                <p class="upcoming-current-date">2024/1/4</p>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-upcoming" id="upcoming-44">
+                                    <a class="card-wrap">
+                                        <div class="session-image-profile-container">
+                                            <div class="audio-open-modal-past session-image-combo-container">
+                                                <i class="fa-solid fa-play session-image-combo-box-play"
+                                                    id="upcoming-session-play-44"></i>
+                                                <img src="/images/home/musicplayer.png" alt="Image 1"
+                                                    class="img-fluid session-image-combo-box-img">
+                                                <div class="session-image-combo-box">
+                                                    <select id="preserve-session-44">
+                                                        <option value="option">Select a Session</option>
+                                                        <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                        <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                        <option value="12" class="upcoming_time_3">3/12/2023 12PM
+                                                        </option>
+                                                        <option value="16" class="upcoming_time_4">3/12/2023 4PM
+                                                        </option>
+                                                        <option value="19" class="upcoming_time_5">3/12/2023 7PM
+                                                        </option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="upcoming-session-date-time">
+                                                <p class="upcoming-current-date">2024/1/4</p>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-upcoming" id="upcoming-55">
+                                    <a class="card-wrap">
+                                        <div class="session-image-profile-container">
+                                            <div class="audio-open-modal-past session-image-combo-container">
+                                                <i class="fa-solid fa-play session-image-combo-box-play"
+                                                    id="upcoming-session-play-55"></i>
+                                                <img src="/images/home/musicplayer.png" alt="Image 1"
+                                                    class="img-fluid session-image-combo-box-img">
+                                                <div class="session-image-combo-box">
+                                                    <select id="preserve-session-55">
+                                                        <option value="option">Select a Session</option>
+                                                        <option value="5" class="upcoming_time_1">3/12/2023 5AM</option>
+                                                        <option value="8" class="upcoming_time_2">3/12/2023 8AM</option>
+                                                        <option value="12" class="upcoming_time_3">3/12/2023 12PM
+                                                        </option>
+                                                        <option value="16" class="upcoming_time_4">3/12/2023 4PM
+                                                        </option>
+                                                        <option value="19" class="upcoming_time_5">3/12/2023 7PM
+                                                        </option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="upcoming-session-date-time">
+                                                <p class="upcoming-current-date">2024/1/4</p>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="slider-wrapper">
+                        <h2 class="past-sessions-title">Past Sessions - Recorded</h2>
+                        <p></p>
+                        <a class="past-sessions-date-pick" id="show-date-yesterday">Yesterday - 3 December 2023</a>
+
+                        <div class="content-wrap">
+
+
+
+
+                            <ul class="slides-container" id="slides-container1">
+                                <button class="slide-arrow" id="slide-arrow-prev1">
+                                    &#8249;
+                                </button>
+                                <button class="slide-arrow" id="slide-arrow-next1">
+                                    &#8250;
+                                </button>
+
+                                <li class="slide">
+                                    <a class="card-wrap">
+                                        <div class="audio-open-modal-past" id="past_session_11">
+                                            <img src="/images/home/musicplayer.jpg" alt="Image 1" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="past-session-related-time">
+                                        <p class="past-session-date-display past-session-date-display-1">2023/01/23</p>
+
+                                    </div>
+                                </li>
+                                <li class="slide">
+                                    <a class="card-wrap">
+                                        <div class="audio-open-modal-past" id="past_session_22">
+                                            <img src="/images/home/musicplayer.jpg" alt="Image 2" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="past-session-related-time">
+                                        <p class="past-session-date-display past-session-date-display-2">2023/01/23</p>
+
+                                    </div>
+                                </li>
+                                <li class="slide">
+                                    <a class="card-wrap">
+                                        <div class="audio-open-modal-past" id="past_session_33">
+                                            <img src="/images/home/musicplayer.jpg" alt="Image 3" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="past-session-related-time">
+                                        <p class="past-session-date-display past-session-date-display-3">2023/01/23</p>
+
+                                    </div>
+                                </li>
+                                <li class="slide">
+                                    <a class="card-wrap">
+                                        <div class="audio-open-modal-past" id="past_session_44">
+                                            <img src="/images/home/musicplayer.jpg" alt="Image 4" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="past-session-related-time">
+                                        <p class="past-session-date-display past-session-date-display-4">2023/01/23</p>
+
+                                    </div>
+                                </li>
+                                <li class="slide">
+                                    <a class="card-wrap">
+                                        <div class="audio-open-modal-past" id="past_session_55">
+                                            <img src="/images/home/musicplayer.jpg" alt="Image 5" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="past-session-related-time">
+                                        <p class="past-session-date-display past-session-date-display-5">2023/01/23</p>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="past-session-modal" tabindex="-1" aria-hidden="true" >
+        <div class="modal-dialog session-player-dialog" id="musicplayer" >
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <div class="audio">
+                            <div class="container-audio-capsule">
+                                <div class="container-audio">
+                                    <div class="musicplayer-head-buttons">
+                                        <a><img class="logo" id="live_logo_img" src="/images/home/live_now.png" /><span
+                                                id="past_savetime_txt"></span></a>
+                                        <span style="display: inline-flex;">
+                                            <a class="music-player-time-display">
+                                                <p class="sandwatch" id="live_session_playing_timer">&#8987; 00:00--</p>
+                                            </a>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a class="music-player-cross-btn"><img id="mute_btn"
+                                                    src="/images/home/unmute.svg" /></a>
+                                        </span>
+                                        <a class="music-player-cross-btn" data-bs-dismiss="modal"
+                                            aria-label="Close"><img id="close_live_session_btn"
+                                                src="/images/home/cross.png" /></a>
+                                    </div>
+                                    <div id="audio-player-bar-container">
+                                    <!---atlers code-->
+                                    <div class="jumbotron">
+			<div class="form-group col-sm-12 text-center">
+				<audio id="localVideo" autoplay controls muted></audio>
+			</div>
+			<div class="form-group col-sm-12 text-center">
+				Microphone Gain: <br><input type=range id="volume_change_input" min=0 max=1 value=1 step=0.01>
+			</div>
+
+			<div class="form-group col-sm-8 text-center">
+				<input type="text" class="form-control" value="test123" id="streamId" placeholder="Type stream name" readonly>
+			</div>
+			<div class="form-group col-sm-12 text-center" id="offlineInfo" >
+				<div class="form-group col-sm-4 offset-sm-4 text-center" style="margin-bottom: 8px;font-size:1em;">
+					<a href="" target="_blank">&nbsp;</a> <!-- this is a place holder to keep the same alignment -->
+				</div>
+				<div class="form-group col-sm-4 offset-sm-4 text-center" style="font-size:1.2em">
+					<span class="badge  badge-secondary">Status: Offline</span>
+				</div>
+			</div>
+			<div class="form-group col-sm-12 text-center" id="broadcastingInfo" style="display: none;">
+				<!--div class="form-group text-center"  style="margin-bottom: 8px;font-size:1em;">
+					<a href="" id="playlink" target="_blank" data-toggle="tooltip" title="Opens in New Tab">Play with WebRTC</a>
+				</div-->
+				<div class="form-group text-center" style="font-size:1.2em">
+					<span class="badge  badge-success" >Status: Publishing</span>
+				</div>
+			</div>
+			
+			<div class="form-group col-sm-12">
+				<button class="btn btn-primary" disabled id="start_publish_button">Start Publishing</button>
+				<button class="btn btn-primary" disabled id="stop_publish_button">Stop Publishing</button>
+                
+			</div>
+		</div>
+		<!---///////////atlers code end-->
+                                        <!--canvas id="canvas_visualization"></canvas-->
+                                        <!-- <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div>
+                                        <div class="colum1">
+                                            <div class="row"></div>
+                                        </div> -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="container-audio1">
+                                <!-- <audio controls loop autoplay>
+                                    
+                                    Your browser dose not Support the audio Tag
+                                </audio> -->
+                                <i class="full-screen fa fa-arrows-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!--past recorded session modal --->
+   
+    <div class="modal fade" id="past-recorded-session-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog session-player-dialog" id="musicplayer">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <div class="audio">
+                            <div class="container-audio-capsule">
+                                <div class="container-audio">
+                                    <div class="musicplayer-head-buttons">
+                                        <a><img class="logo" id="live_logo_img" src="/images/home/play_now.png" style="margin-top:5px" /><span
+                                                id="past_savetime_txt"></span></a>
+                                        <span style="display: inline-flex;">
+                                            <a class="music-player-time-display">
+                                                <p class="sandwatch" id="live_session_playing_timer">&#8987; 00:00</p>
+                                            </a>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a class="music-player-cross-btn"><img id="mute_btn"
+                                                    src="/images/home/unmute.svg" /></a>
+                                        </span>
+                                        <a class="music-player-cross-btn" data-bs-dismiss="modal"
+                                            aria-label="Close"><img id="close_live_session_btn"
+                                                src="/images/home/cross.png" /></a>
+                                    </div>
+                                    <div id="audio-player-bar-container" style="margin-top:100px">
+                                        <!--canvas id="canvas_visualization"></canvas-->
+                                        <audio controls>
+                                            <source src="http://localhost:5080/audio/sample.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                        
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="container-audio1">
+                                <!-- <audio controls loop autoplay>
+                                    
+                                    Your browser dose not Support the audio Tag
+                                </audio> -->
+                                <i class="full-screen fa fa-arrows-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+   
+   <!---End recorded session modal---->
+
+    <div id="procedureModal" class="procedure-modal">
+        <div class="procedure-modal-content">
+            <h4 id="procedure_title">Are you sure you want to proceed?</h4>
+            <div class="container row mt-5 user-management-control">
+                <div class="col-md-6 admin-user-management-control-modal-panel">
+                    <a class="col-md-6 admin-user-management-control-btn-yes" id="procedureYesBtn">Yes</a>
+                </div>
+                <div class="col-md-6 admin-user-management-control-modal-panel">
+                    <a class="col-md-6 admin-user-management-control-btn-no" id="procedureNoBtn">No</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sessionschedule_adminDefaultModal" class="procedure-modal">
+        <div class="procedure-modal-content">
+            <h4>Session scheduled as live successfully.</h4>
+            <div class="user-management-control">
+                <div class=" admin-user-management-control-modal-panel">
+                    <a class="admin-user-management-control-btn-yes" id="sessionschedule_useradminprocedureYesBtn">OK</a>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+
+<form id="audioForm">
+        <label for="audioFileName">Audio File Name:</label>
+        <input type="text" id="audioFileName" name="audioFileName">
+        <button type="button" onClick="submitForm()" >Submit</button>
+    </form>
+    
+</body>
+
+</html>

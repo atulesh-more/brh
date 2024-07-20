@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="admin-login-field">
+
+        <div class="admin-login mx-auto d-flex">
+
+            <div class="field-panel">
+                <h1 class="admin-title">LOGIN</h1>
+                <!-- Pills content -->
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                        <!-- <form> -->
+                        <!-- Email input -->
+                        <div class="mb-4">
+                            <input type="email" id="loginName" placeholder="Email"
+                                class="form-control edited-form-control" />
+                            <label class="invalid-format-label" id="login_email_validate_text">Please insert the valid format</label>
+                        </div>
+                        <!-- Password input -->
+                        <div class="mb-4">
+                            <input type="password" id="loginPassword" placeholder="Password"
+                                class="form-control edited-form-control" />
+                            <label class="invalid-format-label" id="login_password_validate_text">Password field can't be empty!</label>
+                        </div>
+                        <!-- Submit button -->
+                        <div class="mb-4 button-parent-div">
+                            <button type="submit" id="login-button"
+                                class="btn btn-primary btn-login-button-style btn-block mb-4"
+                                style="color: white;">Login</button>
+                        </div>
+                        <!-- </form> -->
+                    </div>
+
+                </div>
+                <!-- Pills content -->
+
+            </div>
+
+            <div id="adminDefaultModal" class="procedure-modal">
+                <div class="procedure-modal-content">
+                    <h4 id="procedure_title">Username or password is incorrect.</h4>
+                    <div class="user-management-control">
+                        <div class=" admin-user-management-control-modal-panel">
+                            <a class="admin-user-management-control-btn-yes" id="adminprocedureYesBtn">OK</a>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

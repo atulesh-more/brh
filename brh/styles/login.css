@@ -1,0 +1,202 @@
+.login-field {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-image: url('/images/home/about-us-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.login {
+    width: 460px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.login .field-panel {
+    width: 100vh;
+}
+
+.login .field-panel .tab-buttons {
+    margin: 0;
+    justify-content: space-between;
+    display: flex;
+    gap: 10px;
+}
+
+.login .field-panel .tab-buttons .btn-active {
+    background-color: #426ff6;
+}
+
+.login .field-panel .edited-form-control {
+    box-shadow: 0.1px 0.1px 2.1px 0.1px #426ff6;
+    border: 1px;
+    height: 40px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #426ff6;
+    /* background-color: var(--bs-nav-pills-link-active-bg); */
+}
+
+.login .field-panel .edited-form-control::placeholder {
+    font-size: 10px;
+}
+
+.login .field-panel .login-tab-nav {
+
+    cursor: pointer;
+    margin: 0;
+}
+
+
+.login .field-panel .recover-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 485px;
+    height: 245px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #c3d5da;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+.login .field-panel .recover-modal .recover-modal-dialog {
+    flex-direction: column;
+}
+
+.login .field-panel .recover-modal .recover-modal-dialog .recover-modal-text {
+    text-align: center;
+}
+
+/* Style for the close button */
+.login .field-panel .recover-modal .recover-modal-dialog .btn-close-modal {
+    cursor: pointer;
+    width: 150px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.login .button-parent-div {
+    display: flex;
+    justify-content: center;
+}
+
+.login .field-panel .btn-login-button-style {
+    width: 200px;
+    background-color: #426ff6;
+}
+   /* The Modal (background) */
+   .procedure-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+  /* Modal Content */
+.procedure-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+    width: 80%;
+    max-width: 550px;
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 15px;
+    background-image: url(/images/home/about-us-bg.jpg);
+}
+.admin-user-management-control-btn-yes {
+    /* border-width: 1px; */
+    /* border-style: solid; */
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 40px 10px 40px;
+    background-color: #426ff6;
+    color: white;
+}
+.admin-user-management-control-btn-no {
+    cursor: pointer;
+     border-width: 1px;
+     border-style: solid;
+     border-radius: 5px;
+     padding: 9px 40px 9px 40px;
+ }
+.user-management-control {
+    justify-content: space-around;
+    margin: 0px;
+}
+.admin-user-management-control-modal-panel {
+    text-align: center;
+    margin-top: 50px;
+}
+@media screen and (max-width: 450px) {
+  
+    .user-management-control {
+        justify-content: space-around;
+        margin: 0px;
+    }
+    .login .field-panel {
+        width: 100%;
+    }
+
+    .login-title-p {
+        text-align: center;
+    }
+
+    .login .field-panel .login-tab-nav {
+        font-size: 12px;
+    }
+
+    .login .field-panel .tab-buttons {
+        padding: 10px;
+    }
+
+    .login .field-panel .tab-content {
+        padding: 10px;
+    }
+
+    .login .forgot-login-mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .login .field-panel .recover-modal {
+
+        width: 300px;
+        height: 200px;
+
+    }
+
+    .login .field-panel .recover-modal .recover-modal-dialog .btn-close-modal {
+
+        margin-top: 15px;
+    }
+}

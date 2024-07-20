@@ -1,0 +1,128 @@
+.admin-login-field {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-image: url('/images/home/about-us-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.admin-login {
+    width: 460px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.admin-login .admin-title {
+    justify-content: center;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.admin-login .field-panel {
+    width: 100vh;
+}
+
+.admin-login .field-panel .tab-buttons {
+    margin: 0;
+    justify-content: space-between;
+    display: flex;
+    gap: 10px;
+}
+
+.admin-login .field-panel .tab-buttons .btn-active {
+    background-color: #426ff6;
+}
+
+.admin-login .field-panel .edited-form-control {
+    box-shadow: 0.1px 0.1px 2.1px 0.1px #426ff6;
+    border: 1px;
+    height: 40px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #426ff6;
+    /* background-color: var(--bs-nav-pills-link-active-bg); */
+}
+
+.admin-login .field-panel .edited-form-control::placeholder {
+    font-size: 10px;
+}
+
+.admin-login .field-panel .login-tab-nav {
+
+    cursor: pointer;
+    margin: 0;
+}
+
+
+.admin-login .field-panel .recover-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 485px;
+    height: 245px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #c3d5da;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+.admin-login .field-panel .recover-modal .recover-modal-dialog {
+    flex-direction: column;
+}
+
+.admin-login .field-panel .recover-modal .recover-modal-dialog .recover-modal-text {
+    text-align: center;
+}
+
+/* Style for the close button */
+.admin-login .field-panel .recover-modal .recover-modal-dialog .btn-close-modal {
+    cursor: pointer;
+    width: 150px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.admin-login .button-parent-div {
+    display: flex;
+    justify-content: center;
+}
+
+.admin-login .field-panel .btn-login-button-style {
+    width: 200px;
+    background-color: #426ff6;
+}
+.invalid-format-label{
+    color: red;
+    font-size: 10px;
+    padding-left:5px;
+    padding-top:5px;
+    display: none;
+  }
+@media (max-width: 450px) {
+    .login-header .title {
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+
+    .login-header .btn-back {
+        display: none;
+    }
+
+    .admin-login .field-panel {
+        width: 100%;
+        padding: 20px;
+    }
+}

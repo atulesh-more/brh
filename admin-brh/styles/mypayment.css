@@ -1,0 +1,371 @@
+.mypayment .title {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.mypayment .mypayment-panel {
+    width: 100%
+}
+
+.mypayment .btn-prcess-payment {
+    color: #426ff6 !important;
+    /* Make the button inline and respect its content width */
+}
+
+.mypayment .btn-prcess-payment:hover {
+    color: white;
+    /* Change the color on hover */
+}
+
+.mypayment .change-password {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 300px;
+    height: 50px;
+    background-color: #426ff6;
+}
+
+.mypayment .validate {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 300px;
+    height: 50px;
+    background-color: #426ff6;
+}
+
+.mypayment .text-center {
+    margin-top: 50px;
+}
+
+.mypayment .text-center .form-group {
+    margin-bottom: 20px;
+}
+
+.mypayment .form-control {
+    height: 40px;
+}
+
+/* Custom style to left-align text within a form group */
+.mypayment .col-form-label {
+    text-align: left;
+}
+
+.mypayment a,
+.mypayment a:hover {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    color: white !important;
+}
+
+#pageHeaderTitle {
+    margin: 4rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* Cards */
+.mypayment .postcard {
+    flex-wrap: wrap;
+    display: flex;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+    border-radius: 10px;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+}
+
+.mypayment .postcard.dark {
+    background-color: #18151f;
+}
+
+.mypayment .postcard.light {
+    background-color: #e1e5ea;
+}
+
+.mypayment .postcard .t-dark {
+    color: #18151f;
+}
+
+.mypayment .postcard a {
+    color: inherit;
+}
+
+.mypayment .postcard h1,
+.mypayment .postcard .h1 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.mypayment .postcard .small {
+    font-size: 80%;
+}
+
+.mypayment .postcard .postcard__title {
+    font-size: 1.75rem;
+}
+
+.mypayment .postcard .postcard__img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.mypayment .postcard .postcard__img_link {
+    display: contents;
+}
+
+.mypayment .postcard .postcard__bar {
+    width: 50px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+}
+
+.mypayment .postcard .postcard__text {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.mypayment .postcard .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: auto;
+}
+
+.mypayment .postcard .postcard__tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.mypayment .postcard .postcard__tagbox .tag__item {
+    text-align: center;
+    width: 100px;
+    align-items: center;
+    display: inline-block;
+    background: #426ff6;
+    border-radius: 3px;
+    padding: 2.5px 5px;
+    margin: 0 5px 5px 0;
+    cursor: default;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.mypayment .postcard .postcard__tagbox .tag__item .btn-subscribe {
+    color: white;
+}
+
+.mypayment .postcard .postcard__tagbox .tag__item:hover {
+    background: red;
+}
+
+.mypayment .postcard:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.mypayment .postcard:hover .postcard__bar {
+    width: 100px;
+}
+
+@media screen and (min-width: 769px) {
+    .mypayment .postcard {
+        flex-wrap: inherit;
+    }
+
+    .mypayment .postcard .postcard__title {
+        font-size: 2rem;
+    }
+
+    .mypayment .postcard .postcard__tagbox {
+        justify-content: start;
+    }
+
+    .mypayment .postcard .postcard__img {
+        max-width: 300px;
+        max-height: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .mypayment .postcard .postcard__text {
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .mypayment .postcard .media.postcard__text:before {
+        content: "";
+        position: absolute;
+        display: block;
+        background: #18151f;
+        top: -20%;
+        height: 130%;
+        width: 55px;
+    }
+
+    .mypayment .postcard:hover .postcard__img {
+        transform: scale(1.1);
+    }
+
+    .mypayment .postcard:nth-child(2n+1) {
+        flex-direction: row;
+    }
+
+    .mypayment .postcard:nth-child(2n+0) {
+        flex-direction: row;
+    }
+
+    .mypayment .postcard:nth-child(2n+1) .postcard__text::before {
+        left: -12px !important;
+        transform: rotate(4deg);
+    }
+
+    .mypayment .postcard:nth-child(2n+0) .postcard__text::before {
+        left: -12px !important;
+        transform: rotate(4deg);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mypayment .postcard__text {
+        padding: 2rem 3.5rem;
+    }
+
+    .mypayment .postcard__text:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: -20%;
+        height: 130%;
+        width: 55px;
+    }
+
+}
+
+/* COLORS */
+
+.mypayment .postcard .postcard__tagbox .blue.play:hover {
+    background: #0076bd;
+}
+
+.mypayment .blue .postcard__title:hover {
+    color: #0076bd;
+}
+
+.mypayment .blue .postcard__bar {
+    background-color: #0076bd;
+}
+
+.mypayment .blue::before {
+    background-image: linear-gradient(-30deg, rgba(0, 118, 189, 0.1), transparent 50%);
+}
+
+.mypayment .blue:nth-child(2n)::before {
+    background-image: linear-gradient(-30deg, rgba(0, 118, 189, 0.1), transparent 50%);
+}
+
+
+@media screen and (min-width: 769px) {
+
+    .mypayment .blue::before {
+        background-image: linear-gradient(-80deg, rgba(0, 118, 189, 0.1), transparent 50%);
+    }
+
+    .mypayment .blue:nth-child(2n)::before {
+        background-image: linear-gradient(-80deg, rgba(0, 118, 189, 0.1), transparent 50%);
+    }
+
+
+}
+
+.mypayment .payment-current-title {
+    margin-bottom: 40px;
+}
+
+.mypayment .current-payment-card {
+    width: 50%;
+}
+
+.mypayment .current-payment-card .order-card-panel {
+    padding-top: 0px;
+
+}
+
+.mypayment .current-payment-card .postcard {
+    /* border-radius: 0px;
+    box-shadow: none;*/
+}
+
+.mypayment .current-payment-card .postcard__subtitle {
+    text-align: end;
+}
+
+.mypayment .current-payment-card .postcard__title {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.mypayment .order-card-panel {
+    padding-top: 20px;
+    display: flex;
+}
+
+.mypayment .order-detail-card {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    box-shadow: none;
+}
+
+
+.mypayment .payment-history-title {
+    padding-top: 80px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+.mypayment .order-detail-panel-1 {}
+
+.mypayment .order-detail-panel-1 .postcard__subtitle {
+    padding-top: 10px;
+}
+
+.mypayment .order-detail-panel-2 {}
+
+.mypayment .order-detail-panel-2 .postcard__preview-txt {
+    text-align: center;
+}
+
+.mypayment .order-detail-panel-2 .postcard__subtitle {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.mypayment .order-detail-panel-3 {}
+
+.mypayment .order-detail-panel-3 .postcard__preview-txt {
+    text-align: end;
+}
+
+.mypayment .order-detail-panel-3 .postcard__subtitle {
+    padding-top: 30px;
+    text-align: end;
+}

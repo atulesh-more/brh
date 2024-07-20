@@ -1,0 +1,41 @@
+.myaccount .title {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.myaccount .myaccount-panel {
+    width: 60%
+}
+
+.myaccount .change-password {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 300px;
+    height: 50px;
+    background-color: #426ff6;
+}
+
+.myaccount .validate {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 300px;
+    height: 50px;
+    background-color: #426ff6;
+}
+
+.myaccount .text-center {
+    margin-top: 50px;
+}
+
+.myaccount .text-center .form-group {
+    margin-bottom: 20px;
+}
+
+.myaccount .form-control {
+    height: 40px;
+}
+
+/* Custom style to left-align text within a form group */
+.myaccount .col-form-label {
+    text-align: left;
+}

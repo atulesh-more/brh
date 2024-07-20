@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin User Management</title>
+</head>
+
+<body>
+
+
+    <div class="affiliate-programs">
+        <div class="container">
+
+            <div class="row dashboard-section user_management">
+                <h1 class="account-title col-md-12 user-management-title-mobile">
+                    User Management
+                </h1>
+                <div class="col-md-12 row admin-user-managemenet-title">
+
+                    <h3 class="col-md-12 admin-manage-btn-cover">
+                        <a class="btn-invite-user" data-bs-toggle="modal"
+                            data-bs-target="#user-management-invite-new-modal">Invite Users</a>
+                    </h3>
+                </div>
+                <div id="wrapper"></div>
+            </div>
+            <div id="user-management-account-active-modal-btn" data-bs-toggle="modal"
+                data-bs-target="#user-management-account-active-modal">
+            </div>
+            <div class="modal fade user-account-active-modal" id="user-management-account-active-modal" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+
+                            <div class="row past-sessions11">
+                                <h4 class="past-sessions-title">Are you sure inactivate the account?</h4>
+                                <a class="past-sessions-date-pick"></a>
+
+                                <div class="container row mt-4 user-management-control">
+                                    <div class="col-md-6 admin-user-management-control-modal-panel"><a
+                                            class="col-md-6 admin-user-management-control-btn-yes"
+                                            data-bs-dismiss="modal" aria-label="Close" href="/users">Yes</a>
+                                    </div>
+                                    <div class="col-md-6 admin-user-management-control-modal-panel"><a
+                                            class="col-md-6 admin-user-management-control-btn-no"
+                                            data-bs-dismiss="modal" aria-label="Close" href="/users">No</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade user-account-active-modal" id="user-management-invite-new-modal" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+
+                            <div class="row past-sessions11">
+                                <h4 class="past-sessions-title">Please type the email address you want to invite:</h4>
+                                <a class="past-sessions-date-pick"></a>
+                                <div class="admin-invite-new-user-text-panel">
+                                    <input type="text" id="txt_email" class="enter-email-address-text"
+                                        placeholder="Enter Email Address"></input>
+                                </div>
+                                <div class="container row mt-4 user-management-control">
+                                    <div class="col-md-6 admin-user-management-control-modal-panel"><a
+                                            class="col-md-6 admin-user-management-control-btn-no"
+                                            data-bs-dismiss="modal" aria-label="Close" href="/users">Cancel</a>
+                                    </div>
+                                    <div class="col-md-6 admin-user-management-control-modal-panel"><a id="btn_send"
+                                            class="col-md-6 admin-user-management-control-btn-yes"
+                                            data-bs-dismiss="modal" aria-label="Close"> Send </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="useradminDefaultModal" class="procedure-modal">
+            <div class="procedure-modal-content">
+                <h4 id="procedure_title">User invited Successfully.</h4>
+                <div class="user-management-control">
+                    <div class=" admin-user-management-control-modal-panel">
+                        <a class="admin-user-management-control-btn-yes" id="useradminprocedureYesBtn">OK</a>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

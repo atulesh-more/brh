@@ -1,0 +1,160 @@
+.login-header {
+    display: flex;
+    align-items: center;
+}
+
+.login-header .btn-back {
+    border-color: black;
+    font-size: 16px;
+}
+
+.conference-header .btn-back {
+    border-color: black;
+    font-size: 16px;
+}
+
+.login-header .title {
+    margin: 0 auto;
+}
+
+.conference-header {
+    display: flex;
+    align-items: center;
+}
+
+.conference-header .current-time {
+    font-size: 12px;
+    text-align: center;
+}
+
+.conference-header .title {
+    margin: 0 auto;
+}
+
+.conference-header .dropdown {}
+
+.conference-header .dropdown {}
+
+.conference-header .dropdown {}
+
+.conference-header .dropbtn {
+    background-color: transparent;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    padding: 3px 3px;
+    font-size: 15px;
+    border-radius: 8px;
+    width: 210px;
+}
+
+.conference-header .dropdown .avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.conference-header .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.conference-header .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 210px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.conference-header .dropdown-content a {
+    /*color: var(--blue);*/
+    color: #333333;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+.conference-header .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.conference-header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.conference-header .dropdown:hover .dropdown-content i {
+    margin-left: 6px;
+    margin-right: 10px;
+}
+
+.conference-header {}
+
+@media screen and (max-width: 450px) {
+    .login-header .title {
+        margin: 0 auto;
+        font-size: 1.25rem;
+    }
+
+    .login-header .long-title-header {
+        font-size: 0.75rem !important;
+    }
+
+    .conference-header .long-title-header {
+        font-size: 0.75rem !important;
+    }
+
+    .conference-header .long-title-header-myaccount {
+        font-size: 1rem !important;
+    }
+
+    .affiliate-header-logout {
+        display: none;
+    }
+
+    .mobile-dropdown-menu {
+        display: none !important;
+    }
+
+    .container-audio1 .full-screen {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .login-header .title {
+        margin: 0 auto;
+        font-size: 1.25rem;
+    }
+
+    .login-header .long-title-header {
+        font-size: 0.75rem !important;
+    }
+
+    .conference-header .long-title-header {
+        font-size: 0.75rem !important;
+    }
+
+    .conference-header .long-title-header-myaccount {
+        font-size: 1rem !important;
+    }
+
+    .affiliate-header-logout {
+        display: none;
+    }
+
+    .mobile-dropdown-menu {
+        display: none !important;
+    }
+
+    .container-audio1 .full-screen {
+        display: none;
+    }
+
+    .long-title-header {
+        font-size: 20px;
+    }
+
+}

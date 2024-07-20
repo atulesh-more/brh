@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My Account</title>
+</head>
+
+<body>
+    <div class="myaccount">
+        <div class="container mt-5 myaccount-panel">
+
+            <!-- Form for Changing Personal Information -->
+            <form class="text-center">
+                <div class="form-group row">
+                    <label for="forename" class="col-sm-3 col-form-label text-left">Forename:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="forename" value="John" disabled>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="surname" class="col-sm-3 col-form-label text-left">Surname:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="surname" value="Williams" disabled>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="username" class="col-sm-3 col-form-label text-left">Username:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="username" value="john-williams" disabled>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="email" class="col-sm-3 col-form-label text-left">Email:</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="email" value="john-wil@gmail.com" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mx-2 validate">Validate</button>
+            </form>
+
+            <hr class="my-4">
+
+            <!-- Form for Changing Password -->
+            <form class="text-center">
+                <div class="form-group row">
+                    <label for="currentPassword" class="col-sm-3 col-form-label text-left">Current Password:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="currentPassword" placeholder="********"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="newPassword" class="col-sm-3 col-form-label text-left">New Password:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="newPassword" placeholder="*********" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="confirmNewPassword" class="col-sm-3 col-form-label text-left">Confirm New
+                        Password:</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="confirmNewPassword" placeholder="*********"
+                            required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mx-2 change-password">Change Password</button>
+
+
+
+            </form>
+
+
+        </div>
+</body>
+
+</html>

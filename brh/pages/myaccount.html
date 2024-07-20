@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My Account</title>
+</head>
+
+<body>
+    <div class="myaccount">
+        <div class="container mt-5 myaccount-panel">
+
+            <!-- Form for Changing Personal Information -->
+            <!-- <form class="text-center"> -->
+            <div class="form-group row">
+                <label for="forename" class="col-sm-4 col-form-label text-left">First name</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="forename" value="John" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="surname" class="col-sm-4 col-form-label text-left">Last Name</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="surname" value="Williams" required>
+                </div>
+            </div>
+
+
+
+            <div class="form-group row">
+                <label for="email" class="col-sm-4 col-form-label text-left">Email:</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" id="email" value="john-wil@gmail.com" disabled>
+                </div>
+            </div>
+
+            <button type="submit" id="validate" class="btn btn-primary mx-2 validate mx-auto">Validate</button>
+            <!-- </form> -->
+
+            <hr class="my-4">
+
+            <!-- Form for Changing Password -->
+            <!-- <form class="text-center"> -->
+            <!-- <form class="text-center"> -->
+            <div class="form-group row">
+                <label for="currentPassword" class="col-sm-4 col-form-label text-left">Current Password:</label>
+                <div class="col-sm-8">
+                    <input type="password" class="form-control" id="currentPassword" placeholder="********" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="newPassword" class="col-sm-4 col-form-label text-left">New Password:</label>
+                <div class="col-sm-8">
+                    <input type="password" class="form-control" id="newPassword" placeholder="*********" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="confirmNewPassword" class="col-sm-4 col-form-label text-left">Confirm New
+                    Password:</label>
+                <div class="col-sm-8">
+                    <input type="password" class="form-control" id="confirmNewPassword" placeholder="*********"
+                        required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mx-2 change-password mx-auto" id="changepasswordButton">Change
+                Password</button>
+
+
+
+            <!-- </form> -->
+
+
+        </div>
+
+        <div id="confirmModal" class="procedure-modal">
+            <div class="procedure-modal-content">
+                <h4 id="procedure_confirm_title"></h4>
+            </div>
+        </div>
+        
+        <div id="changeUserInfoModal" class="procedure-modal">
+            <div class="procedure-modal-content">
+                <h4 id="procedure_title"></h4>
+                <div class="container row mt-5 user-management-control">
+                    <div class="col-md-6 admin-user-management-control-modal-panel">
+                        <a class="col-md-6 admin-user-management-control-btn-yes" id="procedureYesBtn">Yes</a>
+                    </div>
+                    <div class="col-md-6 admin-user-management-control-modal-panel">
+                        <a class="col-md-6 admin-user-management-control-btn-no" id="procedureNoBtn">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="mobile-buttons-conference">
+            <a class="button333" href="/audio-conferencing-platform">
+                <i class="fa fa-video-camera" aria-hidden="true"></i>
+
+                Streaming
+            </a>
+            <a class="button333" href="/audio-conferencing-platform/my-account">
+                <i class="fa fa-user" aria-hidden="true"></i>
+
+                Account
+            </a>
+            <a class="button333" href="/audio-conferencing-platform/my-payment">
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+
+                Payment
+            </a>
+            <a class="button333" href="/join-session">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+
+                Logout
+            </a>
+        </div>
+</body>
+
+</html>
